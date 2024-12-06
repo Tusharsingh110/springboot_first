@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="com.example.autowire.name.Specification" id="specification">
+        <property name="make" value="Toyota" />
+        <property name="model" value="Supra"/>
+    </bean>
+
+    <bean id="myCar" class="com.example.autowire.name.Car" autowire="byName"/>
+</beans>
